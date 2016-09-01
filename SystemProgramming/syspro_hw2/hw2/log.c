@@ -104,7 +104,10 @@ char *log_search(log_t* l, const char *prefix) {
     char* ret=NULL;
     node* this=l->head;
     while(this!=NULL){
-        
+        if(!strncmp(this->cmd,prefix,strlen(prefix))){
+            ret=this->cmd;
+        }
+        this=this->next;
     }
-    return NULL;
+    return ret;
 }
