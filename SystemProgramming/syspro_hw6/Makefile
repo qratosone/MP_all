@@ -1,4 +1,4 @@
-CC = gcc
+CC = clang
 INC = -I. -Ilibs
 FLAGS = -g -W -Wall
 LIBS = -lpthread
